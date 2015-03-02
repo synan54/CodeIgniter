@@ -482,7 +482,7 @@ class CI_FTP {
 		$filepath = preg_replace('/(.+?)\/*$/', '\\1/', $filepath);
 
 		$list = $this->list_files($filepath);
-		if ( ! empty($list))
+		if ( ! empty($list) && count($list)>2)
 		{
 			for ($i = 0, $c = count($list); $i < $c; $i++)
 			{
